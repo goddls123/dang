@@ -1,0 +1,42 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "react-app",
+        "plugin:react/recommended",
+        "plugin:testing-library/react",
+        "plugin:jest-dom/recommended",
+        "plugin:tailwindcss/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "project": "./tsconfig.json"
+    },
+    "plugins": ["prettier", "@tanstack/query", "tailwindcss", "jest-dom", "testing-library"],
+    "rules": {
+        // TODO: Definition for rule '@tanstack/query/prefer-query-object-syntax' was not found
+        "@tanstack/query/exhaustive-deps": "off",
+        "@tanstack/query/no-deprecated-options": "off",
+        "@tanstack/query/prefer-query-object-syntax": "off",
+        "@tanstack/query/stable-query-client": "off",
+        "react/react-in-jsx-scope": 0,
+        "react/prefer-stateless-function": 0,
+        "react/jsx-filename-extension": 0,
+        "react/jsx-one-expression-per-line": 0,
+        "react-hooks/exhaustive-deps": 0,
+        "testing-library/consistent-data-testid": "off",
+        "tailwindcss/no-custom-classname": "off",
+        "tailwindcss/classnames-order": "off",
+        "testing-library/utils-module": "off",
+        "testing-library/custom-renders": "off",
+        "testing-library/custom-queries": "off",
+        "no-console": ["warn", { "allow": ["warn", "error"] }]
+    },
+    "ignorePatterns": ["vitest.config.ts"],
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx", "*.js"],
+            "parser": "@typescript-eslint/parser"
+        }
+    ]
+}
